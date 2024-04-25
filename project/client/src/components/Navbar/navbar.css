@@ -5,7 +5,8 @@
     align-items: center;
 }
 .navbar .logo{
-    width: 150px;
+    width: 180px;
+    margin-left: -50px;
 }
 .navbar-menu{
     display: flex;
@@ -38,4 +39,16 @@
   }
   .navbar li{
       cursor:pointer
+  }
+  .navbar-search-icon{
+    position: relative;
+  }
+  .navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: red;
+    border-radius: 5px;
+    top: -8px;
+    right: -5px;
   }
