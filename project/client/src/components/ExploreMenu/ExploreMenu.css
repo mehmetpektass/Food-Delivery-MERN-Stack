@@ -42,3 +42,11 @@
     background-color: #e2e2e2;
     border: none;
 }
+.explore-menu-list-item .activeImg{
+    border: 2px solid tomato;
+    padding: 1px;
+}
+.explore-menu-list-item .activeText{
+    padding-bottom: 1px;
+    border-bottom: 1px solid #49557e;
+}
