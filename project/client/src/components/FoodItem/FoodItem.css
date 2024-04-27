@@ -1,4 +1,10 @@
-
+.food-item{
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #000015;
+    transition: 0.3s;
+}
 .food-item-image{
     width: 100%;
     border: 15px 15px 0px 0px;
