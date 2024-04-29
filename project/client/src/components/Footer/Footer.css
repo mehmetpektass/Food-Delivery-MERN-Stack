@@ -23,11 +23,7 @@
   gap: 80px;
   width: 100%;
 }
-.logo {
-  width: 300px;
-  height: 100px;
-  border-radius: 12px;
-}
+
 .footer-content-left,
 .footer-content-right,
 .footer-content-center {
