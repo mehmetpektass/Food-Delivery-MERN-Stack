@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { adminAssets } from "../../assets/admin_assets/assets.js";
-import { frontendAssets } from "../../assets/frontend_assets/assets";
+import { frontendAssets } from "../../assets/frontend_assets/assets.js";
 
 const Navbar = () => {
     const [menu , setMenu] = useState('home');
