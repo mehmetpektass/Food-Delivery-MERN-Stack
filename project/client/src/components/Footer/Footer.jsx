@@ -6,13 +6,14 @@ import { frontendAssets } from "../../assets/frontend_assets/assets.js";
 const Footer = () => {
   return (
     <div className="footer" id="footer">
+        <hr />
       <div className="footer-content">
         <div className="footer-content-left">
-          <img src={adminAssets.logo} alt="" />
+          <img src={adminAssets.logo} alt="" className="logo"/>
           <p>
             Explore the world of gourmet meals delivered right to your doorstep
             with Fancy. We are committed to bringing you the best flavors from
-            around the globe, ensuring that every bite is a journey in itself.
+            around the globe.
           </p>
           <div className="footer-social-icons">
             <img src={frontendAssets.linkedin_icon} alt="" />
