@@ -50,3 +50,9 @@
     padding-bottom: 1px;
     border-bottom: 1px solid #49557e;
 }
+@media (max-width:1050px){
+    .explore-menu-text{
+        max-width: 100%;
+        font-size: 14px;
+    }
+}
