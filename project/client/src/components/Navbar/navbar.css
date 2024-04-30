@@ -37,7 +37,7 @@
     padding-bottom: 2px;
     border-bottom: 2px solid #49557e;
   }
-  .navbar li{
+  .navbar a{
       cursor:pointer
   }
   .navbar-search-icon{
