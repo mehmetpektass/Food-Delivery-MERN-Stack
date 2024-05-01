@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./navbar.css";
 import { adminAssets } from "../../assets/admin_assets/assets.js";
 import { frontendAssets } from "../../assets/frontend_assets/assets.js";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({setShowLogin}) => {
     const [menu , setMenu] = useState('home');
+    const {getTotalCartAmount} = useContext(StoreContext);
   return (
     <div className="navbar">
       <Link to={'/'}><img src={adminAssets.logo} alt="" className="logo" /></Link> 
@@ -19,7 +21,7 @@ const Navbar = ({setShowLogin}) => {
         <img src={frontendAssets.search_icon} alt="" />
         <div className="navbar-search-icon">
          <Link to={'/cart'}><img src={frontendAssets.basket_icon} alt="" /></Link> 
-          <div className="dot"></div> 
+          <div className={getTotalCartAmount() === 0? '' : 'dot'}></div> 
         </div>
         <button onClick={() => setShowLogin(true)}>Sign In</button>
       </div>
