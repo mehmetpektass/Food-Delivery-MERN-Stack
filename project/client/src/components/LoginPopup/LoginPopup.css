@@ -45,7 +45,7 @@
     padding: 10px;
     border-radius: 6px;
     color: white;
-    background-color: rgba(192, 97, 81, 0.849);
+    background-color: tomato;
     font-size: 15px;
     cursor: pointer;
 }
@@ -59,7 +59,7 @@
     margin-top: 5px;
 }
 .login-popup p span{
-    color:  rgba(192, 97, 81, 0.849);
+    color:  tomato;
     font-weight: 500;
     cursor: pointer;
     font-size: large;
