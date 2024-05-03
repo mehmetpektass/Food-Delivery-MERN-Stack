@@ -14,19 +14,31 @@ const addFood = async (req, res) => {
     res.json({ success: true, message: "Food Added" });
   } catch (error) {
     console.log(error);
+    res.json({ success: false, message: "Error" });
+  }
+};
+
+const listFood = async (req, res) => {
+  try {
+    const food = await foodModel.find({});
+    res.json({ success: true, data: food });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error" });
+  }
+};
+
+const removeFood = async (req, res) => {
+  try {
+    const selectedFood = await foodModel.findById(req.body.id);
+    fs.unlink(`uploads/${selectedFood.image}`, () => {});
+
+    await foodModel.findByIdAndDelete(req.body.id);
+    res.json({ success: true, message: "Food Deleted" });
+  } catch (error) {
+    console.log(error);
     res.json({success:false , message:'Error'})
   }
 };
 
-
-const listFood = async (req,res) =>{
-    try {
-        const food = await foodModel.find({});
-        res.json({success:true , data:food});
-    } catch (error) {
-        console.log(error);
-        res.json({success:false , message:'Error'});
-    }
-}
-
-export { addFood ,listFood};
+export { addFood, listFood, removeFood};
