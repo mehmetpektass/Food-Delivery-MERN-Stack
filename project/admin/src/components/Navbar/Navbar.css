@@ -10,3 +10,7 @@
 .navbar .profile-image{
     width: 50px;
 }
+.navbar p{
+    margin-right: max(850px,15%);
+    margin-top: 60px;
+}
