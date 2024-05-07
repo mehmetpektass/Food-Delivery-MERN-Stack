@@ -1,9 +1,13 @@
 import React from 'react'
 import './Navbar.css'
+import { adminAssets } from '../../assets/admin_assets/assets'
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <div className='navbar'>
+        <img className='logo' src={adminAssets.logo} alt="" />
+        <img className='profile-image' src={adminAssets.profile_image} alt="" />
+    </div>
   )
 }
 
