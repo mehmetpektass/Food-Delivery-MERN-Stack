@@ -23,7 +23,7 @@ const Add = () => {
     const onSubmitHandler = async (event) => {
         event.preventDefault();
         const formData = new FormData();
-        formData.append('name' , data.name)
+        formData.append('' , data.name)
         formData.append('description' , data.description)
         formData.append('price' , Number(data.price))
         formData.append('category' , data.category)
