@@ -21,7 +21,7 @@ const Add = () => {
                 <p>Product Description</p>
                 <textarea name='description' rows='6' placeholder='Description' />
             </div>
-            <div className='add-product-price'>
+            <div className='add-product-category-price'>
                 <div className='add-category flex-col'>
                     <p>Product Category</p>
                     <select name="category">
@@ -40,7 +40,7 @@ const Add = () => {
                     <input type="number" name='price' placeholder='' />
                 </div>
             </div>
-            <button type='submit' className='add-button'>ADD</button>
+            <button type='submit' className='add-button'>Add Item</button>
         </form>
     </div>
   )
