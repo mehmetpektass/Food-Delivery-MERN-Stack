@@ -21,6 +21,9 @@
 .list-table-format img{
     width: max(90px);
 }
+.list-table-format .cursor{
+    cursor: pointer;
+}
 @media (max-width:600px){
     .list-table-format{
         grid-template-columns: 2fr 3fr 1fr;
