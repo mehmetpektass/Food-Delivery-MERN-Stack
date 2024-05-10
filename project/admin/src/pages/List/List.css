@@ -22,7 +22,9 @@
     width: max(90px);
 }
 .list-table-format .cursor{
-    cursor: pointer;
+    color: rgb(235, 89, 89);
+    font-size: 18px;
+    padding-left: 10px;
 }
 @media (max-width:600px){
     .list-table-format{
