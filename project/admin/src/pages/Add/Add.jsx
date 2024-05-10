@@ -56,7 +56,7 @@ const Add = () => {
             </div>
             <div className='add-product-description flex-col'>
                 <p>Product Description</p>
-                <textarea onChange={onChangeHandler} name='description' rows='6' placeholder='Description' />
+                <textarea onChange={onChangeHandler} value={data.description} name='description' rows='6' placeholder='Description' />
             </div>
             <div className='add-product-category-price'>
                 <div className='add-category flex-col'>
