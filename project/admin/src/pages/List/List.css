@@ -19,5 +19,14 @@
     background-color: #f9f9f9;
 }
 .list-table-format img{
-    width: 90px;
+    width: max(90px);
+}
+@media (max-width:600px){
+    .list-table-format{
+        grid-template-columns: 2fr 3fr 1fr;
+        gap: 15px;
+    }
+    .list-table-format.title{
+        display: none;
+    }
 }
