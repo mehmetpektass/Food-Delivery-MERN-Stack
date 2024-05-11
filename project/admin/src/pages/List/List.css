@@ -25,7 +25,12 @@
     color: rgb(235, 89, 89);
     font-size: 18px;
     padding-left: 10px;
+    cursor: pointer;
 }
+.list-table-format .cursor:hover {
+    cursor: pointer;
+}
+
 @media (max-width:600px){
     .list-table-format{
         grid-template-columns: 2fr 3fr 1fr;
