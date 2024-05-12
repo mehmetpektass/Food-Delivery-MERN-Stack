@@ -47,7 +47,7 @@ const Add = () => {
     <div className="add">
       <form className="flex-col" onSubmit={onSubmitHandler}>
         <div className="add-image-upload flex-col">
-          <p>Upload Image</p>
+          <p>Resim Yükle</p>
           <label htmlFor="image">
             <img
               src={image ? URL.createObjectURL(image) : adminAssets.upload_area}
@@ -63,56 +63,56 @@ const Add = () => {
           />
         </div>
         <div className="add-product-name flex-col">
-          <p>Product Name</p>
+          <p>Ürün Adı</p>
           <input
             onChange={onChangeHandler}
             value={data.name}
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="Ad"
           />
         </div>
         <div className="add-product-description flex-col">
-          <p>Product Description</p>
+          <p>Ürün Açıklaması</p>
           <textarea
             onChange={onChangeHandler}
             value={data.description}
             name="description"
             rows="6"
-            placeholder="Description"
+            placeholder="Açıklama"
           />
         </div>
         <div className="add-product-category-price">
           <div className="add-category flex-col">
-            <p>Product Category</p>
+            <p>Ürün Kategorisi</p>
             <select
               onChange={onChangeHandler}
               value={data.category}
               name="category"
             >
-              <option value="Salad">Salad</option>
-              <option value="Rolls">Rolls</option>
-              <option value="Deserts">Deserts</option>
-              <option value="Sandwich">Sandwich</option>
-              <option value="Cake">Cake</option>
-              <option value="Pure Veg">Pure Veg</option>
-              <option value="Pasta">Pasta</option>
-              <option value="Noodles">Noodles</option>
+              <option value="Salad">Salata</option>
+              <option value="Rolls">Dürüm</option>
+              <option value="Deserts">Tatlı</option>
+              <option value="Sandwich">Sandviç</option>
+              <option value="Cake">Kek</option>
+              <option value="Pure Veg">Vejeteryan</option>
+              <option value="Pasta">Makarna</option>
+              <option value="Noodles">Erişte</option>
             </select>
           </div>
           <div className="add-price flex-col">
-            <p>Product Price</p>
+            <p>Ürün Fiyatı</p>
             <input
               onChange={onChangeHandler}
               value={data.price}
               type="number"
               name="price"
-              placeholder=""
+              placeholder="TL"
             />
           </div>
         </div>
         <button type="submit" className="add-button">
-          Add Item
+          Ürün Ekle
         </button>
       </form>
     </div>

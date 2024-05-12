@@ -6,14 +6,14 @@ import { frontendAssets } from "../../assets/frontend_assets/assets.js";
 const Footer = () => {
   return (
     <div className="footer" id="footer">
-        <hr />
+      <hr />
       <div className="footer-content">
         <div className="footer-content-left">
-          <img src={adminAssets.logo} alt="" className="logo"/>
+          <img src={adminAssets.logo} alt="" className="logo" />
           <p>
-            Explore the world of gourmet meals delivered right to your doorstep
-            with Fancy. We are committed to bringing you the best flavors from
-            around the globe.
+            Kapınıza kadar teslim edilen gurme yemeklerin dünyasını keşfedin
+            fantezi ile. Size en iyi lezzetleri sunmayı taahhüt ediyoruz dünya
+            çapında.
           </p>
           <div className="footer-social-icons">
             <img src={frontendAssets.linkedin_icon} alt="" />
@@ -22,23 +22,25 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-content-center">
-            <h2>COMPANY</h2>
-            <ul>
-                <li>HOME</li>
-                <li>ABOUT US</li>
-                <li>DELIVERY</li>
-                <li>PRIVACY POLICY</li>
-            </ul>
+          <h2>ŞİRKET</h2>
+          <ul>
+            <li>ANA SAYFA</li>
+            <li>HAKKIMIZDA</li>
+            <li>SİPARİŞ</li>
+            <li>GİZLİLİK POLİTİKASI</li>
+          </ul>
         </div>
         <div className="footer-content-right">
-            <h2>GET IN TOUCH</h2>
-            <ul>
-                <li>+1-234-567-8900</li>
-                <li>contact@fancy.com</li>
-            </ul>
+          <h2>İLETİŞİM</h2>
+          <ul>
+            <li>+90-213-566-89-00</li>
+            <li>iletisim@fancy.com</li>
+          </ul>
         </div>
       </div>
-      <p className="footer-copyright">Copyright 2024 © Fancy.com -All Right Reserved.</p>
+      <p className="footer-copyright">
+      Telif Hakkı 2024 © Fancy.com -Tüm Hakları Saklıdır.
+      </p>
     </div>
   );
 };

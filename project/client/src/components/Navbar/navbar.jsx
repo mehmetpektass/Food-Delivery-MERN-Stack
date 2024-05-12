@@ -12,10 +12,10 @@ const Navbar = ({setShowLogin}) => {
     <div className="navbar">
       <Link to={'/'}><img src={adminAssets.logo} alt="" className="logo" /></Link> 
       <ul className="navbar-menu">
-        <Link to={'/'} onClick={() => setMenu('home')} className={menu=== 'home' ? 'active' : ''}>HOME</Link>
-        <a href="#explore-menu" onClick={() => setMenu('menu')} className={menu=== 'menu' ? 'active' : ''}>MENU</a>
-        <a href="#app-download" onClick={() => setMenu('mobileApp')} className={menu=== 'mobileApp' ? 'active' : ''}>MOBILE-APP</a>
-        <a href="#footer" onClick={() => setMenu('contactUs')} className={menu=== 'contactUs' ? 'active' : ''}>CONTACT US</a>
+        <Link to={'/'} onClick={() => setMenu('home')} className={menu=== 'home' ? 'active' : ''}>ANA SAYFA</Link>
+        <a href="#explore-menu" onClick={() => setMenu('menu')} className={menu=== 'menu' ? 'active' : ''}>MENÜ</a>
+        <a href="#app-download" onClick={() => setMenu('mobileApp')} className={menu=== 'mobileApp' ? 'active' : ''}>MOBILE</a>
+        <a href="#footer" onClick={() => setMenu('contactUs')} className={menu=== 'contactUs' ? 'active' : ''}>İLETİŞİM</a>
       </ul>
       <div className="navbar-right">
         <img src={frontendAssets.search_icon} alt="" />
@@ -23,7 +23,7 @@ const Navbar = ({setShowLogin}) => {
          <Link to={'/cart'}><img src={frontendAssets.basket_icon} alt="" /></Link> 
           <div className={getTotalCartAmount() === 0? '' : 'dot'}></div> 
         </div>
-        <button onClick={() => setShowLogin(true)}>Sign In</button>
+        <button onClick={() => setShowLogin(true)}>Üye Ol</button>
       </div>
     </div>
   );

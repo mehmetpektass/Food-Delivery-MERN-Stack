@@ -5,9 +5,9 @@ import { menu_list } from "../../assets/frontend_assets/assets.js";
 const ExploreMenu = ({ category, setCategory }) => {
   return (
     <div className="explore-menu" id="explore-menu">
-      <h1>Explore Our Menu</h1>
+      <h1>Menümüzü Keşfedin</h1>
       <p className="explore-menu-text">
-        Choose From A Diverse Menu You Want To Eat
+      Yemek istediğiniz Çeşitli Menüden Seçim yapın
       </p>
       <div className="explore-menu-list">
         {menu_list.map((item, index) => {

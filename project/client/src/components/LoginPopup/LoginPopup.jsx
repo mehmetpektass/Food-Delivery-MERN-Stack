@@ -19,27 +19,27 @@ const LoginPopup = ({ setShowLogin }) => {
           {currentState === "Log In" ? (
             <></>
           ) : (
-            <input type="text" placeholder="Your Name" required />
+            <input type="text" placeholder=" Kullanıcı Adı" required />
           )}
-          <input type="email" placeholder="Your Email" required />
-          <input type="password" placeholder="Your Password" required />
+          <input type="email" placeholder="Mail" required />
+          <input type="password" placeholder="Şifre" required />
         </div>
         <button>
           {currentState === "Sign Up" ? "Create Account" : "Log In"}
         </button>
         <div className="login-popup-condition">
           <input type="checkbox" required />
-          <p>By Continuing, I Agree to The Terms of Use & Privacy Policy</p>
+          <p>Devam Ederek, Kullanım Koşullarını ve Gizlilik Politikasını Kabul Ediyorum</p>
         </div>
         {currentState === "Log In" ? (
           <p>
-            Create An Account?{" "}
-            <span onClick={() => setCurrentState("Sign Up")}>Click Here</span>
+            Hesap Oluştur?{" "}
+            <span onClick={() => setCurrentState("Sign Up")}>Tıkla</span>
           </p>
         ) : (
           <p>
-            Already Have An Account?{" "}
-            <span onClick={() => setCurrentState("Log In")}>Login Here</span>
+            Zaten Bir Hesabın Mı Var?{" "}
+            <span onClick={() => setCurrentState("Log In")}>Giriş Yap</span>
           </p>
         )}
       </form>

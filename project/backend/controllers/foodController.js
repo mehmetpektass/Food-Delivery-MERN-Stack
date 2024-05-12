@@ -11,10 +11,10 @@ const addFood = async (req, res) => {
   });
   try {
     await food.save();
-    res.json({ success: true, message: "Food Added Successfully" });
+    res.json({ success: true, message: "Ürün Başarıyla Eklendi" });
   } catch (error) {
     console.log(error);
-    res.json({ success: false, message: "Error" });
+    res.json({ success: false, message: "Hata" });
   }
 };
 
@@ -24,7 +24,7 @@ const listFood = async (req, res) => {
     res.json({ success: true, data: food });
   } catch (error) {
     console.log(error);
-    res.json({ success: false, message: "Error" });
+    res.json({ success: false, message: "Hata" });
   }
 };
 
@@ -34,10 +34,10 @@ const removeFood = async (req, res) => {
     fs.unlink(`uploads/${selectedFood.image}`, () => {});
 
     await foodModel.findByIdAndDelete(req.body.id);
-    res.json({ success: true, message: "Food Deleted" });
+    res.json({ success: true, message: "Ürün Silindi" });
   } catch (error) {
     console.log(error);
-    res.json({success:false , message:'Error'})
+    res.json({success:false , message:'Hata'})
   }
 };
 

@@ -84,35 +84,35 @@ export const frontendAssets = {
 
 export const menu_list = [
     {
-        menu_name: "Salad",
+        menu_name: "Salata",
         menu_image: menu_1
     },
     {
-        menu_name: "Rolls",
+        menu_name: "Dürüm",
         menu_image: menu_2
     },
     {
-        menu_name: "Deserts",
+        menu_name: "Tatlı",
         menu_image: menu_3
     },
     {
-        menu_name: "Sandwich",
+        menu_name: "Sandviç",
         menu_image: menu_4
     },
     {
-        menu_name: "Cake",
+        menu_name: "Kek",
         menu_image: menu_5
     },
     {
-        menu_name: "Pure Veg",
+        menu_name: "Vejeteryan",
         menu_image: menu_6
     },
     {
-        menu_name: "Pasta",
+        menu_name: "Makarna",
         menu_image: menu_7
     },
     {
-        menu_name: "Noodles",
+        menu_name: "Erişte",
         menu_image: menu_8
     }]
 
