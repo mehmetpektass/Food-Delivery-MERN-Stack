@@ -1,7 +1,7 @@
 # Food Delivery Application -MERN Stack🍟
 
 ## Description
-This project is developed to create a food ordering application.<b> MERN stack (MongoDB, Express.js, React, Node.js) , JWT, Stripe, Axios, React-Toastify, Multer, React Router. </b> Customers can choose from various food categories, add them to their carts, and complete their orders. Administrators can add, list, and manage orders.
+This project is developed to create a food ordering application.<b> MERN stack (MongoDB, Express.js, React, Node.js) , JWT, Stripe, Axios, React-Toastify, Bcrypt, Multer, Validator, React Router. </b> Customers can choose from various food categories, add them to their carts, and complete their orders. Administrators can add, list, and manage orders.
 
 <br>
 
@@ -61,7 +61,9 @@ npm run dev
 * Mongoose
 * Multer
 * JWT (JSON Web Tokens)
+* Bcrypt
 * Stripe
+* Validator
 
 ### Frontend: 
 * React.js
