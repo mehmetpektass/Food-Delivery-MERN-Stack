@@ -4,6 +4,20 @@ import { frontendAssets } from "../../assets/frontend_assets/assets";
 
 const LoginPopup = ({ setShowLogin }) => {
   const [currentState, setCurrentState] = useState("Sign Up");
+  const [data , setData]  = useState({
+    name:"",
+    email:"",
+    password:"",
+  })
+
+  const onChangeHandler = (event) => {
+    const name = event.taget.name;
+    const value = event.taget.value;
+
+    setData((data) => ({...data,[name]:value}))
+    console.log(data)
+  }
+
   return (
     <div className="login-popup">
       <form className="login-popup-container">
@@ -19,13 +33,13 @@ const LoginPopup = ({ setShowLogin }) => {
           {currentState === "Log In" ? (
             <></>
           ) : (
-            <input type="text" placeholder=" Kullanıcı Adı" required />
+            <input type="text" name="name" onChange={onChangeHandler} value={data.name} placeholder=" Kullanıcı Adı" required />
           )}
-          <input type="email" placeholder="Mail" required />
-          <input type="password" placeholder="Şifre" required />
+          <input type="email" name="email" value={data.email} onChange={onChangeHandler} placeholder="Mail" required />
+          <input type="password" name="password" onChange={onChangeHandler} value={data.password} placeholder="Şifre" required />
         </div>
         <button>
-          {currentState === "Sign Up" ? "Create Account" : "Log In"}
+          {currentState === "Sign Up" ? "Hesap Oluştur" : "Giriş Yap"}
         </button>
         <div className="login-popup-condition">
           <input type="checkbox" required />
