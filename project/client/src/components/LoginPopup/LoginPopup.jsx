@@ -39,16 +39,13 @@ const LoginPopup = ({ setShowLogin }) => {
 
       if (response.data.success && response.data.token) {
         setToken(response.data.token);
-        
         localStorage.setItem('token', response.data.token);
         setShowLogin(false);
       } else {
-        alert(response.data.message || 'Something went wrong.');
-        console.log(response.data.token);
+        console.log(response.data.message || 'Something went wrong.');
       }
     } catch (error) {
       console.error('Error during the login/register process:', error);
-      alert('An error occurred. Please try again later.');
     }
   }
 
