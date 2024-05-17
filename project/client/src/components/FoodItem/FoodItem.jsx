@@ -4,12 +4,12 @@ import { frontendAssets } from "../../assets/frontend_assets/assets.js";
 import { StoreContext } from "../../context/StoreContext.jsx";
 
 const FoodItem = ({ id, name, price, description, image }) => {
-  const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
+  const { cartItems, addToCart, removeFromCart ,url} = useContext(StoreContext);
 
   return (
     <div className="food-item">
       <div className="food-item-img-container">
-        <img className="food-item-image" src={image} alt="" />
+        <img className="food-item-image" src={url + '/images/' +image} alt="" />
         {!cartItems[id] ? (
           <img
             className="add"
@@ -37,7 +37,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
           <p>{name}</p>
         </div>
         <p className="food-item-description">{description}</p>
-        <p className="food-item-price">${price}</p>
+        <p className="food-item-price">{price} TL</p>
       </div>
     </div>
   );
