@@ -27,25 +27,28 @@ const LoginPopup = ({ setShowLogin }) => {
     event.preventDefault();
 
     let newUrl = url;
-    if(currentState=== ' Log In'){
+    if(currentState=== 'Log In'){
       newUrl += '/api/user/login'
     }
     else{
       newUrl += '/api/user/register'
     }
-    const response = await axios.post(newUrl,data)
-    console.log(response.data.token);
+     try {
+      const response = await axios.post(newUrl, data);
+      console.log(response.data);
 
-    if (response.data.success) {
-      setToken(response.data.token)
-      
-      localStorage.setItem('token' , response.data.token)
-      
-      setShowLogin(false);
-      
-    }
-    else{
-      alert(response.data.message);
+      if (response.data.success && response.data.token) {
+        setToken(response.data.token);
+        
+        localStorage.setItem('token', response.data.token);
+        setShowLogin(false);
+      } else {
+        alert(response.data.message || 'Something went wrong.');
+        console.log(response.data.token);
+      }
+    } catch (error) {
+      console.error('Error during the login/register process:', error);
+      alert('An error occurred. Please try again later.');
     }
   }
 

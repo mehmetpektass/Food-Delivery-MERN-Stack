@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt'
 import validator from "validator";
 
 const createToken = (id) => {
-    jwt.sign({id} , process.env.JWT_SECRET)
+   return  jwt.sign({id} , process.env.JWT_SECRET)
 }
 
 const loginUser = async (req,res) => {
@@ -54,7 +54,7 @@ const registerUser = async (req,res) => {
 
         const user = await newUser.save();
         const token = createToken(user._id)
-        res.json({success:true,token})
+        res.json({success:true, token})
 
     } catch (error) {
         console.log(error)
