@@ -5,50 +5,47 @@ import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
 
 const LoginPopup = ({ setShowLogin }) => {
-
-  const { url ,setToken} = useContext(StoreContext);
+  const { url, setToken } = useContext(StoreContext);
 
   const [currentState, setCurrentState] = useState("Log In");
-  const [data , setData]  = useState({
-    name:"",
-    email:"",
-    password:"",
-  })
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
   const onChangeHandler = (event) => {
     const name = event.target.name;
     const value = event.target.value;
 
-    setData((data) => ({...data,[name]:value}))
-  }
-    
+    setData((data) => ({ ...data, [name]: value }));
+  };
 
   const onLogin = async (event) => {
     event.preventDefault();
 
     let newUrl = url;
-    if(currentState=== 'Log In'){
-      newUrl += '/api/user/login'
+    if (currentState === "Log In") {
+      newUrl += "/api/user/login";
+    } else {
+      newUrl += "/api/user/register";
     }
-    else{
-      newUrl += '/api/user/register'
-    }
-     try {
+    try {
       const response = await axios.post(newUrl, data);
       console.log(response.data);
 
       if (response.data.success && response.data.token) {
         setToken(response.data.token);
-        localStorage.setItem('token', response.data.token);
+        localStorage.setItem("token", response.data.token);
         setShowLogin(false);
         window.location.reload();
       } else {
-        console.log(response.data.message || 'Something went wrong.');
+        console.log(response.data.message || "Something went wrong.");
       }
     } catch (error) {
-      console.error('Error during the login/register process:', error);
+      console.error("Error during the login/register process:", error);
     }
-  }
+  };
 
   return (
     <div className="login-popup">
@@ -65,17 +62,41 @@ const LoginPopup = ({ setShowLogin }) => {
           {currentState === "Log In" ? (
             <></>
           ) : (
-            <input type="text" name="name" onChange={onChangeHandler} value={data.name} placeholder=" Kullanıcı Adı" required />
+            <input
+              type="text"
+              name="name"
+              onChange={onChangeHandler}
+              value={data.name}
+              placeholder=" Kullanıcı Adı"
+              required
+            />
           )}
-          <input type="email" name="email"  onChange={onChangeHandler} value={data.email} placeholder="Mail" required />
-          <input type="password" name="password" onChange={onChangeHandler} value={data.password} placeholder="Şifre" required />
+          <input
+            type="email"
+            name="email"
+            onChange={onChangeHandler}
+            value={data.email}
+            placeholder="Mail"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            onChange={onChangeHandler}
+            value={data.password}
+            placeholder="Şifre"
+            required
+          />
         </div>
         <button type="submit">
           {currentState === "Sign Up" ? "Hesap Oluştur" : "Giriş Yap"}
         </button>
         <div className="login-popup-condition">
           <input type="checkbox" required />
-          <p>Devam Ederek, Kullanım Koşullarını ve Gizlilik Politikasını Kabul Ediyorum</p>
+          <p>
+            Devam Ederek, Kullanım Koşullarını ve Gizlilik Politikasını Kabul
+            Ediyorum
+          </p>
         </div>
         {currentState === "Log In" ? (
           <p>
